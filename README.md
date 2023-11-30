@@ -12,19 +12,10 @@ Your descriptions should be a little longer than the example above, but not so l
 
 ```
 As a user, I want the ability to... 
-  - sign up.
-  - sign .
-  - change my password. 
-  - sign out. 
-  - create my own recipes. 
-  - update my recipes. 
-  - view all of my recipes in a list. 
-  - read more details of individual recipes. 
-  - delete my recipes. 
-  - view recipes others have created. 
-  - favorite recipes that other people have created. 
-  - read all of the recipes I have favorited. 
-  - remove recipes from my favorites. 
+  - Sign name.
+  - Play agian.
+  - See there time scores. 
+  - Easy to use.
 ```
 
 ## Wireframes / Screenshots
