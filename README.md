@@ -13,7 +13,7 @@ Your descriptions should be a little longer than the example above, but not so l
 ```
 As a user, I want the ability to... 
   - sign up.
-  - sign in. 
+  - sign .
   - change my password. 
   - sign out. 
   - create my own recipes. 
