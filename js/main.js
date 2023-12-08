@@ -74,7 +74,6 @@ const cards = [
         card2 = null;
       }, 1000);
     } else {
-    
       setTimeout(() => {
         card1.classList.remove("flip");
         card2.classList.remove("flip");
