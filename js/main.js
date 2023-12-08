@@ -12,11 +12,20 @@ const cards = [
 
   const doubledCards = cards.concat(cards);
   const game = document.getElementById("game");
+  const winner = document.querySelector("winner");
+
   
   let card1 = null;
   let card2 = null;
-  
+  let p = document.createElement("p");
+  if (p.classList.contains("winner")) {
+    p.classList.remove("winner");
+  } else {
+    p.classList.add("winner");
+  } 
 
+  
+  
   function shuffle(array) {
     let currentIndex = array.length,
         temporaryValue,
@@ -51,7 +60,7 @@ const cards = [
     this.classList.add("flip");
     this.textContent = cards.find(
       (card) => card.name === this.dataset.name
-    ).emoji; 
+    ).emoji;
   
     if (!card1) {
       card1 = this;
@@ -63,9 +72,17 @@ const cards = [
   
   function checkForMatch() {
     if (card1.textContent === card2.textContent) {
-      // cards match
+
       setTimeout(() => {
-        alert("You found a match!");
+        p.classList.add("winner");
+        p.textContent = "You won!";
+      game.appendChild(p);
+      }
+      , 1000);
+      setTimeout(() => {
+        card1.classList.remove("flip");
+        card2.classList.remove("flip");
+
         card1.textContent = "";
         card2.textContent = ""; 
         card1.removeEventListener("click", flipCard); 
@@ -74,6 +91,7 @@ const cards = [
         card2 = null;
       }, 1000);
     } else {
+    
       setTimeout(() => {
         card1.classList.remove("flip");
         card2.classList.remove("flip");
@@ -85,6 +103,8 @@ const cards = [
     }
   }
   
+
+
 function resetGame() {
     game.innerHTML = "";
     createBoard();
